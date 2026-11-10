@@ -1,0 +1,79 @@
+:root {
+  --navy: #1b2f5e;
+  --navy-light: #eef2fa;
+  --accent: #3b66c4;
+  --text: #1f2a44;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, sans-serif;
+  color: var(--text);
+  background: #fff;
+  font-size: 18px;
+  line-height: 1.7;
+}
+a { text-decoration: none; color: inherit; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 480px; }
+
+.nav { position: sticky; top: 0; background: #fffffff0; backdrop-filter: blur(6px); border-bottom: 1px solid #dfe6f3; z-index: 10; }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+.logo { font-weight: 800; font-size: 22px; color: var(--navy); }
+.nav nav { display: flex; gap: 16px; align-items: center; font-size: 16px; }
+.nav-cta { background: var(--navy); color: #fff; padding: 6px 14px; border-radius: 20px; }
+
+.hero { text-align: center; padding: 80px 0; background: linear-gradient(180deg, var(--navy-light), #fff); }
+.badge { display: inline-block; background: #fff; color: var(--navy); border: 1px solid #c9d5ee; padding: 6px 14px; border-radius: 20px; font-size: 16px; font-weight: 600; }
+.hero h1 { font-size: 52px; line-height: 1.2; margin: 16px 0; color: var(--navy); }
+.price { font-size: 26px; margin: 0 0 8px; }
+.price strong { display: inline-block; background: var(--navy); color: #fff; font-size: 40px; padding: 2px 20px; border-radius: 14px; margin-left: 6px; }
+.sub { font-size: 20px; margin-bottom: 28px; }
+.cta { display: flex; justify-content: center; }
+
+.btn { display: inline-block; background: var(--navy); color: #fff; border: 0; padding: 16px 32px; font-size: 19px; font-weight: 700; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 12px #1b2f5e50; transition: transform .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-big { padding: 20px 56px; font-size: 24px; }
+
+.section { padding: 64px 0; text-align: center; }
+.section.alt { background: var(--navy-light); }
+.section h2 { font-size: 34px; margin: 0 0 16px; color: var(--navy); }
+.lead { font-size: 22px; font-weight: 600; color: var(--accent); }
+.solution { max-width: 640px; margin: 16px auto 0; font-size: 19px; }
+.solution strong { color: var(--navy); }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
+.card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 14px #1b2f5e1a; }
+.icon { width: 72px; height: 72px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 40px; background: var(--navy-light); border-radius: 50%; }
+.card h3 { margin: 8px 0; color: var(--navy); font-size: 20px; }
+.card p { margin: 0; }
+.review { text-align: left; }
+.review span { display: block; margin-top: 12px; font-size: 15px; color: var(--accent); font-weight: 600; }
+
+.faq details { background: var(--navy-light); border-radius: 12px; margin-top: 12px; padding: 16px 20px; text-align: left; }
+.faq summary { cursor: pointer; font-weight: 700; color: var(--navy); }
+.faq details p { margin: 10px 0 0; }
+
+form { display: flex; flex-direction: column; gap: 16px; text-align: left; margin-top: 20px; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+input { padding: 12px; font-size: 18px; border: 2px solid #c9d5ee; border-radius: 10px; font-family: inherit; }
+input:focus { outline: none; border-color: var(--navy); }
+.success { font-size: 24px; font-weight: 700; color: var(--navy); background: var(--navy-light); padding: 24px; border-radius: 16px; }
+
+.footer { background: var(--navy); color: #dfe6f3; text-align: center; padding: 32px 0; font-size: 16px; }
+.footer p { margin: 4px 0; }
+
+@media (max-width: 720px) {
+  .hero { padding: 48px 0; }
+  .hero h1 { font-size: 36px; }
+  .price strong { font-size: 34px; }
+  .btn-big { padding: 18px 36px; font-size: 21px; }
+  .sub { font-size: 18px; }
+  .cards { grid-template-columns: 1fr; }
+  .section { padding: 44px 0; }
+  .section h2 { font-size: 28px; }
+  .nav nav { gap: 10px; font-size: 15px; }
+}
